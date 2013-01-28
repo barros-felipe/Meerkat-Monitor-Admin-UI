@@ -1,0 +1,70 @@
+<%
+	boolean active = Boolean.valueOf((String)session.getAttribute("active"));
+	if(!active){
+		response.sendRedirect("login.html");
+	}
+%>
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Meerkat-Monitor - Config</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<%@include file="shared/javascript-imports.txt" %>
+		<%@include file="shared/css-imports.txt" %>
+	</head>
+	<body>
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<%@include file="shared/menu-items.txt" %>
+				</ul>
+			</nav>
+
+		<!-- Work -->
+			<div class="wrapper wrapper-style2">
+				<article id="work">
+					<header>
+						<h2><strong>Meerkat-Monitor</strong></h2>
+						<span>Configuration Tool</span>
+					</header>
+					<div class="5grid-layout">
+						<div class="row">
+							<div class="4u">
+								<section class="box box-style1">
+									<span class="image image-centered"><img src="images/work01.png" alt="" /></span>
+									<h3>Consequat lorem</h3>
+									<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
+								</section>
+							</div>
+							<div class="4u">
+								<section class="box box-style1">
+									<span class="image image-centered"><img src="images/work02.png" alt="" /></span>
+									<h3>Lorem dolor tempus</h3>
+									<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
+								</section>
+							</div>
+							<div class="4u">
+								<section class="box box-style1">
+									<span class="image image-centered"><img src="images/work03.png" alt="" /></span>
+									<h3>Feugiat posuere</h3>
+									<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
+								</section>
+							</div>
+						</div>
+					</div>
+					<footer>
+						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
+						<a href="#portfolio" class="button button-big">See some of my recent work</a>
+					</footer>
+				</article>
+			</div>
+
+			<!--  Footer -->
+			<%@include file="shared/footer.txt" %>
+
+	</body>
+</html>
